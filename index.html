@@ -3,99 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wixly - Curaduría de Tecnología, IA y Recursos Digitales</title>
-    <!-- Tailwind CSS para un diseño moderno y rápido -->
+    <title>Wixly - Tu Guía de Selección Digital</title>
+    <!-- Tailwind CSS para un diseño rápido y moderno -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background-color: #090a0f;
-            color: #f3f4f6;
+            background-color: #0f172a; /* Azul marino oscuro muy tech */
+            color: #f1f5f9; /* Gris muy claro para el texto */
             font-family: system-ui, -apple-system, sans-serif;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+<body class="min-h-screen flex flex-col selection:bg-sky-500 selection:text-white">
 
-    <!-- CABECERA / NAVBAR -->
-    <header class="border-b border-gray-800 bg-[#090a0f]/80 backdrop-blur sticky top-0 z-50">
+    <!-- CABECERA / NAVBAR (Bloque 1) -->
+    <header class="border-b border-slate-700 bg-[#0f172a]/90 backdrop-blur sticky top-0 z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="120" height="30">
-                    <text x="0" y="25" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
-                        Wix<tspan fill="#3b82f6">ly</tspan>
-                    </text>
-                    <circle cx="98" cy="21" r="2.5" fill="#3b82f6" />
-                </svg>
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-2 text-2xl font-extrabold tracking-tight">
+                Wix<span class="text-sky-400">ly</span>
             </a>
-            <!-- Menú de navegación rápido -->
-            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400">
-                <a href="#ia" class="hover:text-white transition">IA & Software</a>
-                <a href="#habilidades" class="hover:text-white transition">Habilidades</a>
-                <a href="#gadgets" class="hover:text-white transition">Gadgets</a>
-            </nav>
+            <!-- BUSCAR -->
+            <div class="flex items-center gap-2 text-sm text-slate-400 border border-slate-600 rounded-full px-4 py-1.5 hover:border-sky-500 transition cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                <span>Buscar...</span>
+            </div>
         </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
-    <main class="max-w-6xl mx-auto px-6 py-12 flex-grow">
+    <main class="max-w-6xl mx-auto px-6 py-8 flex-grow space-y-10">
         
-        <!-- SECCIÓN HERO -->
-        <section class="text-center max-w-2xl mx-auto mb-16">
-            <span class="bg-blue-950 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-wider">Curaduría Inteligente</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4 mb-4">Lo mejor de internet, seleccionado para ti.</h1>
-            <p class="text-gray-400 text-lg">Descubre herramientas de IA, recursos digitales y tecnología recomendados sin rodeos.</p>
+        <!-- SECCIÓN HERO (Bloque 2) -->
+        <section class="text-center bg-slate-800/50 p-12 rounded-3xl border border-slate-700 shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">ENCUENTRA LO QUE NECESITAS</h1>
+            <p class="text-slate-300 text-xl max-w-xl mx-auto mb-8 leading-relaxed">Productos, herramientas y recursos seleccionados para ayudarte a elegir.</p>
+            <a href="#categorias" class="inline-block bg-sky-600 hover:bg-sky-500 text-white font-semibold px-10 py-3 rounded-full transition shadow-md transform hover:-translate-y-0.5">
+                [ Explorar catálogo ]
+            </a>
         </section>
 
-        <!-- GRID DE PRODUCTOS / RECOMENDACIONES -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <!-- Tarjeta 1: IA / Software -->
-            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
-                <div>
-                    <span class="text-xs font-medium text-blue-400 bg-blue-950/60 px-2.5 py-1 rounded-md">IA & Software</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Herramienta de Automatización IA</h3>
-                    <p class="text-gray-400 text-sm mb-6">Optimiza tus procesos y genera contenido el doble de rápido con esta plataforma recomendada.</p>
-                </div>
-                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
-                    Conseguir recurso
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <!-- ¿QUÉ ESTÁS BUSCANDO? - Categorías (Bloque 3) -->
+        <section id="categorias" class="space-y-6">
+            <h2 class="text-2xl font-bold text-sky-300 tracking-tight flex items-center gap-2">
+                ¿QUÉ ESTÁS BUSCANDO?
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="#" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                    <span class="text-4xl">🤖</span>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold group-hover:text-sky-300">IA Y HERRAMIENTAS</h3>
+                        <p class="text-slate-400 text-sm">Software, Automatización, Diseño</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                    <span class="text-4xl">🎓</span>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold group-hover:text-sky-300">APRENDIZAJE</h3>
+                        <p class="text-slate-400 text-sm">Cursos, E-books, Capacitación</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                    <span class="text-4xl">💻</span>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold group-hover:text-sky-300">TECNOLOGÍA</h3>
+                        <p class="text-slate-400 text-sm">Gadgets, Hardware, Accesorios</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                    <span class="text-4xl">🏋️</span>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold group-hover:text-sky-300">ENTRENAMIENTO</h3>
+                        <p class="text-slate-400 text-sm">Fitness, Salud, Bienestar</p>
+                    </div>
                 </a>
             </div>
+        </section>
 
-            <!-- Tarjeta 2: Habilidades Digitales (Hotmart) -->
-            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
-                <div>
-                    <span class="text-xs font-medium text-purple-400 bg-purple-950/60 px-2.5 py-1 rounded-md">Habilidades Digitales</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Masterclass Edición y Contenido</h3>
-                    <p class="text-gray-400 text-sm mb-6">Aprende las bases exactas para dominar la creación de videos virales y monetización.</p>
+        <!-- 🔥 DESTACADOS (Bloque 4) -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-amber-300 tracking-tight flex items-center gap-2">
+                🔥 DESTACADOS
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Producto 1 -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-amber-600 transition group">
+                    <div class="h-40 bg-slate-700 rounded-lg flex items-center justify-center text-slate-500">[Imagen Producto]</div>
+                    <h3 class="font-semibold group-hover:text-amber-300">[Producto Titulo]</h3>
+                    <button class="w-full bg-amber-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-amber-500 transition">Ver detalles</button>
                 </div>
-                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
-                    Ver programa
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <!-- Producto 2 -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-amber-600 transition group">
+                    <div class="h-40 bg-slate-700 rounded-lg flex items-center justify-center text-slate-500">[Imagen Producto]</div>
+                    <h3 class="font-semibold group-hover:text-amber-300">[Producto Titulo]</h3>
+                    <button class="w-full bg-amber-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-amber-500 transition">Ver detalles</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 space-y-4 hover:border-amber-600 transition group">
+                    <div class="h-40 bg-slate-700 rounded-lg flex items-center justify-center text-slate-500">[Imagen Producto]</div>
+                    <h3 class="font-semibold group-hover:text-amber-300">[Producto Titulo]</h3>
+                    <button class="w-full bg-amber-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-amber-500 transition">Ver detalles</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 🆚 COMPARACIONES (Bloque 5) -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-violet-300 tracking-tight flex items-center gap-2">
+                🆚 COMPARACIONES
+            </h2>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 space-y-5">
+                <a href="#" class="block border-b border-slate-700 pb-4 hover:text-violet-300 transition group">
+                    <h3 class="text-lg font-medium">¿Qué micrófono elegir?</h3>
+                    <p class="text-slate-400 text-sm">Análisis de opciones para streaming y podcasting.</p>
+                </a>
+                <a href="#" class="block hover:text-violet-300 transition group">
+                    <h3 class="text-lg font-medium">¿Qué curso de Excel elegir?</h3>
+                    <p class="text-slate-400 text-sm">Comparativa de las mejores plataformas de formación.</p>
                 </a>
             </div>
+        </section>
 
-            <!-- Tarjeta 3: Gadgets (Amazon) -->
-            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
-                <div>
-                    <span class="text-xs font-medium text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded-md">Tecnología & Gadgets</span>
-                    <h3 class="text-xl font-bold mt-4 mb-2">Setup Esencial para Creadores</h3>
-                    <p class="text-gray-400 text-sm mb-6">El accesorio indispensable de escritorio recomendado para mejorar la productividad diaria.</p>
-                </div>
-                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
-                    Ver en Amazon
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <!-- 📚 GUÍAS (Bloque 6) -->
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-emerald-300 tracking-tight flex items-center gap-2">
+                📚 GUÍAS
+            </h2>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                <a href="#" class="block hover:text-emerald-300 transition group">
+                    <h3 class="text-lg font-medium">Cómo elegir...</h3>
+                    <p class="text-slate-400 text-sm">Una guía paso a paso para tomar la mejor decisión de compra.</p>
                 </a>
             </div>
-
         </section>
 
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="border-t border-gray-800/80 py-8 text-center text-xs text-gray-500">
-        <p>© 2026 Wixly. Todos los derechos reservados. Los enlaces compartidos pueden contener afiliación.</p>
+    <footer class="border-t border-slate-700 py-10 text-center text-sm text-slate-500 mt-10">
+        <p>© 2026 Wixly. Todos los derechos reservados.</p>
+        <p class="mt-1">Curaduría independiente para ayudarte a elegir.</p>
     </footer>
 
 </body>
