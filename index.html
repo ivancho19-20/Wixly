@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wixly - Curaduría de Tecnología, IA y Recursos Digitales</title>
+    <!-- Tailwind CSS para un diseño moderno y rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #090a0f;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+    <!-- CABECERA / NAVBAR -->
+    <header class="border-b border-gray-800 bg-[#090a0f]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" width="120" height="30">
+                    <text x="0" y="25" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+                        Wix<tspan fill="#3b82f6">ly</tspan>
+                    </text>
+                    <circle cx="98" cy="21" r="2.5" fill="#3b82f6" />
+                </svg>
+            </a>
+            <!-- Menú de navegación rápido -->
+            <nav class="hidden md:flex items-center gap-6 text-sm text-gray-400">
+                <a href="#ia" class="hover:text-white transition">IA & Software</a>
+                <a href="#habilidades" class="hover:text-white transition">Habilidades</a>
+                <a href="#gadgets" class="hover:text-white transition">Gadgets</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="max-w-6xl mx-auto px-6 py-12 flex-grow">
+        
+        <!-- SECCIÓN HERO -->
+        <section class="text-center max-w-2xl mx-auto mb-16">
+            <span class="bg-blue-950 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full border border-blue-800/50 uppercase tracking-wider">Curaduría Inteligente</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4 mb-4">Lo mejor de internet, seleccionado para ti.</h1>
+            <p class="text-gray-400 text-lg">Descubre herramientas de IA, recursos digitales y tecnología recomendados sin rodeos.</p>
+        </section>
+
+        <!-- GRID DE PRODUCTOS / RECOMENDACIONES -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Tarjeta 1: IA / Software -->
+            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
+                <div>
+                    <span class="text-xs font-medium text-blue-400 bg-blue-950/60 px-2.5 py-1 rounded-md">IA & Software</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Herramienta de Automatización IA</h3>
+                    <p class="text-gray-400 text-sm mb-6">Optimiza tus procesos y genera contenido el doble de rápido con esta plataforma recomendada.</p>
+                </div>
+                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
+                    Conseguir recurso
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Tarjeta 2: Habilidades Digitales (Hotmart) -->
+            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
+                <div>
+                    <span class="text-xs font-medium text-purple-400 bg-purple-950/60 px-2.5 py-1 rounded-md">Habilidades Digitales</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Masterclass Edición y Contenido</h3>
+                    <p class="text-gray-400 text-sm mb-6">Aprende las bases exactas para dominar la creación de videos virales y monetización.</p>
+                </div>
+                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
+                    Ver programa
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Tarjeta 3: Gadgets (Amazon) -->
+            <div class="bg-[#12141c] border border-gray-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-gray-700 transition">
+                <div>
+                    <span class="text-xs font-medium text-amber-400 bg-amber-950/60 px-2.5 py-1 rounded-md">Tecnología & Gadgets</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2">Setup Esencial para Creadores</h3>
+                    <p class="text-gray-400 text-sm mb-6">El accesorio indispensable de escritorio recomendado para mejorar la productividad diaria.</p>
+                </div>
+                <a href="TU_ENLACE_DE_AFILIADO_AQUI" target="_blank" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
+                    Ver en Amazon
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t border-gray-800/80 py-8 text-center text-xs text-gray-500">
+        <p>© 2026 Wixly. Todos los derechos reservados. Los enlaces compartidos pueden contener afiliación.</p>
+    </footer>
+
+</body>
+</html>
