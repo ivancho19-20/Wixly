@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wixly - Tecnología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-sky-500 selection:text-white">
+
+    <!-- Encabezado -->
+    <header class="border-b border-slate-800 py-4 px-6 flex justify-between items-center bg-slate-900/50 backdrop-blur-md">
+        <a href="index.html" class="text-xl font-bold tracking-wider text-white">Wix<span class="text-sky-500">ly</span></a>
+        <a href="index.html" class="text-sm bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg transition border border-slate-700">← Volver al inicio</a>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-grow w-full">
+        <div class="mb-8">
+            <span class="text-xs font-semibold px-3 py-1 bg-sky-900/60 text-sky-300 rounded-full border border-sky-700/50">Categoría</span>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Tecnología y Gadgets</h1>
+            <p class="text-slate-400 mt-1">Dispositivos y accesorios seleccionados para potenciar tu espacio de trabajo.</p>
+        </div>
+
+        <!-- Lista de Productos en la Categoría -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Producto 1: Logitech Brio 300 -->
+            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-4 hover:border-sky-500 transition group flex flex-col justify-between">
+                <div>
+                    <div class="h-48 bg-slate-950 rounded-lg overflow-hidden flex items-center justify-center mb-4">
+                        <img src="brio300.png" alt="Logitech Brio 300" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-semibold text-lg text-white group-hover:text-sky-300">Logitech Brio 300</h3>
+                    <p class="text-slate-400 text-sm mt-1">Cámara web Full HD 1080p con USB-C, micrófono con cancelación de ruido y obturador de privacidad.</p>
+                </div>
+                <a href="brio300.html" class="block w-full text-center bg-sky-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-sky-500 transition">
+                    Ver detalles del producto
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+        © 2026 Wixly. Curaduría independiente.
+    </footer>
+
+</body>
+</html>
