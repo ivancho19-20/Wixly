@@ -59,34 +59,35 @@
                 ¿QUÉ ESTÁS BUSCANDO?
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <a href="ia.html" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
-                    <span class="text-4xl">🤖</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold group-hover:text-sky-300">IA Y HERRAMIENTAS</h3>
-                        <p class="text-slate-400 text-sm">Software, Automatización, Diseño</p>
-                    </div>
-                </a>
-                <a href="aprendizaje.html" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
-                    <span class="text-4xl">🎓</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold group-hover:text-sky-300">APRENDIZAJE</h3>
-                        <p class="text-slate-400 text-sm">Cursos, E-books, Capacitación</p>
-                    </div>
-                </a>
-                <a href="tecnologia.html" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
-                    <span class="text-4xl">💻</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold group-hover:text-sky-300">TECNOLOGÍA</h3>
-                        <p class="text-slate-400 text-sm">Gadgets, Hardware, Accesorios</p>
-                    </div>
-                </a>
-<a href="entrenamiento.html" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">                    <span class="text-4xl">🏋️</span>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold group-hover:text-sky-300">ENTRENAMIENTO</h3>
-                        <p class="text-slate-400 text-sm">Fitness, Salud, Bienestar</p>
-                    </div>
-                </a>
-            </div>
+            <a href="ia.html" data-keywords="ia y herramientas software automatizacion diseno" class="categoria-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                <span class="text-4xl">🤖</span>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold group-hover:text-sky-300">IA Y HERRAMIENTAS</h3>
+                    <p class="text-slate-400 text-sm">Software, Automatización, Diseño</p>
+                </div>
+            </a>
+            <a href="aprendizaje.html" data-keywords="aprendizaje cursos e-books capacitacion" class="categoria-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                <span class="text-4xl">🎓</span>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold group-hover:text-sky-300">APRENDIZAJE</h3>
+                    <p class="text-slate-400 text-sm">Cursos, E-books, Capacitación</p>
+                </div>
+            </a>
+            <a href="tecnologia.html" data-keywords="tecnologia gadgets hardware accesorios" class="categoria-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                <span class="text-4xl">💻</span>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold group-hover:text-sky-300">TECNOLOGÍA</h3>
+                    <p class="text-slate-400 text-sm">Gadgets, Hardware, Accesorios</p>
+                </div>
+            </a>
+            <a href="entrenamiento.html" data-keywords="entrenamiento fitness salud bienestar" class="categoria-card bg-slate-800 p-6 rounded-2xl border border-slate-700 flex items-center gap-4 hover:border-sky-600 transition group">
+                <span class="text-4xl">🏋️‍♂️</span>
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold group-hover:text-sky-300">ENTRENAMIENTO</h3>
+                    <p class="text-slate-400 text-sm">Fitness, Salud, Bienestar</p>
+                </div>
+            </a>
+        </div>
         </section>
 
         <!-- 🔥 DESTACADOS (Bloque 4) -->
@@ -167,4 +168,22 @@
     </footer>
 
 </body>
+<script>
+        const buscador = document.getElementById('buscador');
+        const tarjetas = document.querySelectorAll('.categoria-card');
+
+        buscador.addEventListener('input', (e) => {
+            const texto = e.target.value.toLowerCase().trim();
+
+            tarjetas.forEach(tarjeta => {
+                const keywords = tarjeta.getAttribute('data-keywords').toLowerCase();
+                if (keywords.includes(texto)) {
+                    tarjeta.style.display = ''; 
+                } else {
+                    tarjeta.style.display = 'none'; 
+                }
+            });
+        });
+    </script>
 </html>
+
