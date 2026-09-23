@@ -35,14 +35,24 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main class="max-w-6xl mx-auto px-6 py-8 flex-grow space-y-10">
         
-        <!-- SECCIÓN HERO (Bloque 2) -->
-        <section class="text-center bg-slate-800/50 p-12 rounded-3xl border border-slate-700 shadow-lg">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">ENCUENTRA LO QUE NECESITAS</h1>
-            <p class="text-slate-300 text-xl max-w-xl mx-auto mb-8 leading-relaxed">Productos, herramientas y recursos seleccionados para ayudarte a elegir.</p>
-            <a href="#categorias" class="inline-block bg-sky-600 hover:bg-sky-500 text-white font-semibold px-10 py-3 rounded-full transition shadow-md transform hover:-translate-y-0.5">
-                [ Explorar catálogo ]
-            </a>
-        </section>
+<!-- Sección de Bienvenida / Hero -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/10 via-transparent to-amber-500/10 pointer-events-none"></div>
+            <div class="relative z-10 space-y-3 max-w-2xl mx-auto">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">BIENVENIDO A WIXLY 👋</h1>
+                <p class="text-lg font-medium text-sky-400">
+                    Descubre productos, herramientas y recursos que pueden hacerte la vida más fácil.
+                </p>
+                <p class="text-slate-400 text-sm sm:text-base pt-2">
+                    En Wixly reunimos y organizamos opciones de distintas categorías para que puedas encontrar lo que buscas sin perder tiempo.
+                </p>
+            </div>
+            <div class="relative z-10 pt-2 flex flex-wrap justify-center gap-3">
+                <a href="#categorias" class="px-6 py-3 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-medium text-sm transition shadow-lg shadow-sky-600/20">
+                    Explorar categorías
+                </a>
+            </div>
+        </div>
 
         <!-- ¿QUÉ ESTÁS BUSCANDO? - Categorías (Bloque 3) -->
         <section id="categorias" class="space-y-6">
