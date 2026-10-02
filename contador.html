@@ -10,20 +10,24 @@
     <div class="bg-[#1e293b] p-8 rounded-2xl shadow-xl text-center max-w-md w-full border border-slate-700">
         <h1 class="text-2xl font-bold mb-4">📊 Panel de Visitas en Vivo</h1>
         <p class="text-slate-400 mb-6">Total de visualizaciones acumuladas en <strong>Wixly</strong>:</p>
-        <div id="wixly-visits" class="text-5xl font-extrabold text-indigo-400 mb-6">Cargando...</div>
+        <div id="wixly-visits" class="text-2xl font-bold text-indigo-400 mb-6">Conectando...</div>
         <a href="index.html" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-2.5 rounded-xl transition">Volver al Inicio</a>
     </div>
 
     <script>
         fetch('https://api.counterapi.dev/v1/wixlyoficial/visitas/hit')
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error('Error en el servidor de la API');
+                return response.json();
+            })
             .then(data => {
-                // Verificamos ambas opciones posibles de la API para evitar el undefined
                 const total = data.value !== undefined ? data.value : (data.response !== undefined ? data.response : 1);
+                document.getElementById('wixly-visits').className = "text-5xl font-extrabold text-indigo-400 mb-6";
                 document.getElementById('wixly-visits').innerText = total;
             })
             .catch(error => {
-                document.getElementById('wixly-visits').innerText = '1';
+                document.getElementById('wixly-visits').className = "text-sm text-red-400 mb-6";
+                document.getElementById('wixly-visits').innerText = "Bloqueado o API caída (Error de red)";
             });
     </script>
 </body>
