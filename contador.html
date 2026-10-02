@@ -18,7 +18,9 @@
         fetch('https://api.counterapi.dev/v1/wixlyoficial/visitas/hit')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('wixly-visits').innerText = data.response;
+                // Verificamos ambas opciones posibles de la API para evitar el undefined
+                const total = data.value !== undefined ? data.value : (data.response !== undefined ? data.response : 1);
+                document.getElementById('wixly-visits').innerText = total;
             })
             .catch(error => {
                 document.getElementById('wixly-visits').innerText = '1';
