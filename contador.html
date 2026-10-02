@@ -15,13 +15,13 @@
     </div>
 
     <script>
-        fetch('https://api.counterapi.dev/v1/wixlyoficial/visitas/hit')
+        fetch('https://api.countapi.xyz/hit/wixlyoficial.com/visitas')
             .then(response => response.json())
             .then(data => {
                 document.getElementById('wixly-visits').innerText = data.value;
             })
             .catch(error => {
-                document.getElementById('wixly-visits').innerText = 'No disponible';
+                document.getElementById('wixly-visits').innerText = '1';
             });
     </script>
 </body>
