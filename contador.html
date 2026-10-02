@@ -15,14 +15,12 @@
     </div>
 
     <script>
-        // Usamos una alternativa estable de API de conteo
         fetch('https://api.counterapi.dev/v1/wixlyoficial/visitas/hit')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('wixly-visits').innerText = data.value;
+                document.getElementById('wixly-visits').innerText = data.response;
             })
             .catch(error => {
-                // Fallback local seguro si la red falla
                 document.getElementById('wixly-visits').innerText = '1';
             });
     </script>
