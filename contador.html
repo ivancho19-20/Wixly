@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Visitas - Wixly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0f172a] text-[#f1f5f9] flex flex-col items-center justify-center min-h-screen">
+    <div class="bg-[#1e293b] p-8 rounded-2xl shadow-xl text-center max-w-md w-full border border-slate-700">
+        <h1 class="text-2xl font-bold mb-4">📊 Panel de Visitas en Vivo</h1>
+        <p class="text-slate-400 mb-6">Total de visualizaciones acumuladas en <strong>Wixly</strong>:</p>
+        <div id="wixly-visits" class="text-5xl font-extrabold text-indigo-400 mb-6">Cargando...</div>
+        <a href="index.html" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-2.5 rounded-xl transition">Volver al Inicio</a>
+    </div>
+
+    <script>
+        fetch('https://api.counterapi.dev/v1/wixlyoficial/visitas/hit')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('wixly-visits').innerText = data.value;
+            })
+            .catch(error => {
+                document.getElementById('wixly-visits').innerText = 'No disponible';
+            });
+    </script>
+</body>
+</html>
